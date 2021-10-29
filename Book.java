@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 /**
  * Created by Дмитрий on 16.10.2021.
@@ -83,29 +84,17 @@ public class Book {
 
     public void setAuthors(String[] authors) {
         this.authors = authors;
-        int i = 0;
-
-        if (authors[0] == null)
-            throw new IllegalArgumentException("The array must not contain empty references.");
-
-        for (String a : authors) {
-             authors[i] = a;
-             i++;
-        }
     }
 
     public String getAuthors() {
         String resAuthor = "";
 
-        if (this.authors == null)
+        //System.out.println(Arrays.toString(authors));
+
+        if (authors == null || authors[0] == null)
             return "There is no authors.";
 
         for (int i = 0; i<this.authors.length; i++) {
-            if (authors[0]==null) {
-                return resAuthor="There is no authors.";
-            }
-            if (authors[i]==null)
-                return resAuthor;
             resAuthor=resAuthor + authors[i] + "; ";
         }
         return resAuthor;

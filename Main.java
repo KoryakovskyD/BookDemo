@@ -1,4 +1,3 @@
-
 /**
  * Created by Дмитрий on 16.10.2021.
  */
@@ -22,7 +21,6 @@ public class Main {
         Book bookByAuthorIndex =  new Book("Java. Полное руководство, 10-е издание",new String[] {"Седжвик Роберт","Уэйн Кевин"}, 2018, publishingOffice4);
         System.out.println("\nAuthor by index 1 = " + bookByAuthorIndex.getAuthorByIndex(1)+ "\n");
        //bookByAuthorIndex.getAuthorByIndex(2);   //error
-
         Book.printAll(book);
 
         // An error in the name of the city! The array will be printed again with the error replaced.
@@ -34,5 +32,13 @@ public class Main {
 
         Book.printAll(book);
 
+
+        System.out.println("---------------Test--------------------");
+
+        Book bookWithoutAuthor1 =  new Book("Java. Полное руководство, 10-е издание",new String[] {null}, 2018, publishingOffice4);
+        Book bookWithoutAuthor2 =  new Book("Java. Полное руководство, 10-е издание", 2018, publishingOffice4);
+
+        bookWithoutAuthor1.print();
+        bookWithoutAuthor2.print();
     }
 }
