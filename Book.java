@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * Created by Дмитрий on 16.10.2021.
  */
@@ -16,17 +14,12 @@ public class Book {
     }
 
     public Book(String name, String author,  int year, PublishingOffice publishingOffice) {
-        setName(name);
-        setYear(year);
-        setPublishingOffice(publishingOffice);
-        authors = new String[1];
-        this.authors[0] = author;
+        this(name, year, publishingOffice);
+        this.authors = new String[]{author};
     }
 
     public Book(String name, String[] authors,  int year, PublishingOffice publishingOffice) {
-        setName(name);
-        setYear(year);
-        setPublishingOffice(publishingOffice);
+        this(name, year, publishingOffice);
         setAuthors(authors);
     }
 
